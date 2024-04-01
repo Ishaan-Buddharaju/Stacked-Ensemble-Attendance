@@ -24,3 +24,5 @@ plt.figure(figsize=(20,10))
 FeatureHeatMap = sns.heatmap(CorrelationDF.corr(), vmin=-1, vmax=1, annot=True, cmap='BrBG')
 FeatureHeatMap.set_title('Feature Correlation Heatmap')
 plt.savefig(fname= 'Feature Correlation Heatmap')
+
+print('Done!')
