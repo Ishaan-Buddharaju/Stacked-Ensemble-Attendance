@@ -7,6 +7,7 @@ import seaborn as sns
 # python -m pip install -U pip
 # python -m pip install -U matplotlib
 # pip install numpy
+# pip install pandas
 
 Data = pd.read_csv('StudentData.csv')
 
@@ -14,7 +15,7 @@ Data['#AP/Honors'] = Data['#Honors semesters'] + Data['#AP semesters']
 Data = Data[['Student', 'Grade', 'GPA', '#AP/Honors', '#Honors semesters', '#AP semesters', 'Days Enrolled', 'Days Present', 'Att Rate']]
 Data['Days Absent'] = Data['Days Enrolled'] - Data['Days Present']
 Data = Data[['Student', 'Grade', 'GPA', '#AP/Honors', '#Honors semesters', '#AP semesters', 'Days Absent', 'Days Enrolled', 'Days Present', 'Att Rate']]
-Data.drop(labels=['#Honors semesters', '#AP semesters','Days Present'], axis=1)
+Data = Data.drop(labels=['#Honors semesters', '#AP semesters','Days Present'], axis=1)
 
 CorrelationDF = Data.drop(labels=["Student"], axis=1).corr()
 
