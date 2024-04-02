@@ -12,6 +12,15 @@ import seaborn as sns
 
 Data = pd.read_csv('StudentData.csv')
 
+before_processed_shape = Data.shape[0]
+Data = Data.dropna()
+after_processed_shape = Data.shape[0]
+
+DiscardedCount = open("HeatMapIndividualDiscardCount.txt", 'a')
+DiscardedCount.write("Original Count/Shape:" + str(before_processed_shape))
+DiscardedCount.write("\n\nNew Count/Shape:" + str(after_processed_shape))
+DiscardedCount.close()
+
 Data['#AP/Honors'] = Data['#Honors semesters'] + Data['#AP semesters']
 Data = Data[['Student', 'Grade', 'GPA', '#AP/Honors', '#Honors semesters', '#AP semesters', 'Days Enrolled', 'Days Present', 'Att Rate']]
 Data['Days Absent'] = Data['Days Enrolled'] - Data['Days Present']

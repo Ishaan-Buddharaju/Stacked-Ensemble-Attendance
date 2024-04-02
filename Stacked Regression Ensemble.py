@@ -15,6 +15,15 @@ from sklearn.metrics import mean_squared_error
 
 Data = pd.read_csv('StudentData.csv')
 
+before_processed_shape = Data.shape[0]
+Data = Data.dropna()
+after_processed_shape = Data.shape[0]
+
+DiscardedCount = open("StackedIndividualDiscardCount.txt", 'a')
+DiscardedCount.write("Original Count/Shape:" + str(before_processed_shape))
+DiscardedCount.write("\n\nNew Count/Shape:" + str(after_processed_shape))
+DiscardedCount.close()
+
 Data['#AP/Honors'] = Data['#Honors semesters'] + Data['#AP semesters']
 Data = Data[['Student', 'Grade', 'GPA', '#AP/Honors', '#Honors semesters', '#AP semesters', 'Days Enrolled', 'Days Present', 'Att Rate']]
 Data['Days Absent'] = Data['Days Enrolled'] - Data['Days Present']
@@ -25,7 +34,7 @@ TrainingDF = Data.drop(labels=["Student"], axis=1)
 X = TrainingDF[['Grade', 'GPA', '#AP/Honors', 'Days Absent', 'Days Enrolled']]
 y = TrainingDF[['Att Rate']]
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 44, test_size = 0.25, shuffle= True)
-
+y_train = y_train.values.ravel()
 
 etr = ExtraTreesRegressor(random_state=19) #Extra Trees
 etr.fit(X_train, y_train)
