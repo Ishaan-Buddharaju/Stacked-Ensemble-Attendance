@@ -12,7 +12,7 @@ To begin, download python at https://www.python.org/downloads/. Once that's done
   - pip install -U scikit-learn
 
 Next clone the repository or download _**Heatmap.py, KNNGridSearch.py, and Stacked Regression Ensemble.py**_ in the same folder as the student data, name the student data "StudentData.csv," and run each respective file in the terminal. 
-Lastly, just send me the three outputs of those files: KNN Grid Search.png, Feature Correlation Heatmap.png, and Error Metrics.csv 
+Lastly, just send me the outputs of those files: KNN Grid Search.png, Feature Correlation Heatmap.png, Error Metrics.csv, HeatMapIndividualDiscardCount.txt, KNNIndividualDiscardCount.txt, and StackedIndividualDiscardCount.txt. 
 
 _**IMPORTANT**_: THE REAL DATA FILE MUST BE NAMED "StudentData.csv" IF THIS IS NOT DONE THE FILES WILL NOT RUN
   
