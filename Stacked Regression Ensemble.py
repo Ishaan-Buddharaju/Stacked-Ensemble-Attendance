@@ -44,7 +44,7 @@ etr_r2 = r2_score(y_test, etr_y_pred)
 etr_MAE = mean_absolute_error(y_test, etr_y_pred)
 etr_MSE = mean_squared_error(y_test, etr_y_pred)
 
-KNN = KNeighborsRegressor(3) #KNN
+KNN = KNeighborsRegressor(4) #KNN, k value chosen based on gridsearch
 KNN.fit(X_train, y_train)
 
 KNN_y_pred = KNN.predict(X_test)
