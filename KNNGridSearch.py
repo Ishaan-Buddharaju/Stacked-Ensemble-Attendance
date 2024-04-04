@@ -47,8 +47,9 @@ for x in range(3,50):
 plt.plot(k_values, mae_scores, marker = 'o', linestyle='-')
 plt.xlabel("K-value")
 plt.ylabel('Mean Absolute Error (MAE)')
-plt.title("K-value v. Mean Absolute Error of KNN model")
+plt.title("K-value (3-50) v. Mean Absolute Error of KNN model")
 plt.grid(True)
 plt.savefig(fname= 'KNN Grid Search')
 
 print('Done!')
+
