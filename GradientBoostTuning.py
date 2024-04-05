@@ -43,7 +43,7 @@ best_params = grid_result.best_params_
 
 Tuning_results = open("GBRTuningResults.txt", 'a')
 Tuning_results.write("Best Results:" + str(best_result))
-Tuning_results.write("\n\nNew Count/Shape:" + str(best_params))
+Tuning_results.write("\n\nBest Parameters:" + str(best_params))
 Tuning_results.close()
 
 print("Done!")
