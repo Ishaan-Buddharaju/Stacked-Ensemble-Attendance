@@ -82,7 +82,7 @@ for train_idx, test_idx in Kf.split(X, y):
     KNN_MSE_scores.append(mean_squared_error(y_test, etr_y_pred))
 
     #GBR Model
-    GBR = GradientBoostingRegressor(loss = 'absolute_error', subsample=0.5)
+    GBR = GradientBoostingRegressor(learning_rate = 0.05, max_depth = 3, min_samples_leaf = 1, min_samples_split = 5, n_estimators = 150, subsample = 0.7)
     GBR.fit(X_train, y_train)
     GBR_y_pred = GBR.predict(X_test)
     
