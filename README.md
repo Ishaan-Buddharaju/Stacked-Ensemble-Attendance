@@ -1,7 +1,5 @@
 Welcome to the repository for my AP Research project, "Creating a Stacked Ensemble Regressor to Predict Student Attendance."
 
-**For a video tutorial of how to run the files (the same information is outlined below) go to the following link:** https://youtu.be/4tByS7O9KlI
-
 To begin, download python at https://www.python.org/downloads/. Once that's done run the following commands in your terminal:
 
   - python -m pip install -U pip
