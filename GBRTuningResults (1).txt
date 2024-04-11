@@ -1,3 +1,0 @@
-Best Results:0.971543408409341
-
-Best Parameters:{'learning_rate': 0.05, 'max_depth': 3, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 150, 'subsample': 0.7}
