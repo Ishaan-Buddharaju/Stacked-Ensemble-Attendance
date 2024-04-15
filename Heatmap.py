@@ -10,7 +10,7 @@ import seaborn as sns
 # pip install seaborn
 
 
-Data = pd.read_csv('StudentData.csv')
+Data = pd.read_csv('PseudoData.csv')
 
 before_processed_shape = Data.shape[0]
 Data = Data.dropna()
@@ -29,9 +29,12 @@ Data = Data.drop(labels=['#Honors semesters', '#AP semesters','Days Present'], a
 
 CorrelationDF = Data.drop(labels=["Student", "Att Rate"], axis=1).corr()
 
-plt.figure(figsize=(20,10))
-FeatureHeatMap = sns.heatmap(CorrelationDF.corr(), vmin=-1, vmax=1, annot=True, cmap='BrBG')
-FeatureHeatMap.set_title('Feature Correlation Heatmap')
+plt.figure(figsize=(20,12))
+FeatureHeatMap = sns.heatmap(CorrelationDF.corr(), vmin=-1, vmax=1, annot=True, cmap='BrBG', annot_kws={'size': 20})
+FeatureHeatMap.set_title('Feature Correlation Heatmap', fontsize=28)
+plt.xticks(fontsize=16, weight='bold')
+plt.yticks(fontsize=16, weight='bold')
 plt.savefig(fname= 'Feature Correlation Heatmap')
+
 
 print('Done!')
