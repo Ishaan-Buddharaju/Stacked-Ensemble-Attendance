@@ -1,6 +1,6 @@
 Welcome to the repository for my AP Research project, "Creating a Stacked Ensemble Regressor to Predict Student Attendance."
 
-To begin, download python at https://www.python.org/downloads/. Once that's done run the following commands in your terminal:
+To begin, download python at https://www.python.org/downloads/. Once that's done install the following dependencies:
 
   - python -m pip install -U pip
   - python -m pip install -U matplotlib
