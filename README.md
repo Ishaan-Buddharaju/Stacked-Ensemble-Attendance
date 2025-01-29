@@ -1,4 +1,5 @@
-Welcome to the repository for my AP Research project, "Creating a Stacked Ensemble Regressor to Predict Student Attendance."
+**Welcome to the repository for my AP Research project, "Creating a Stacked Ensemble Regressor to Predict Student Attendance."**
+*The paper resulting from this research can be found at: https://drive.google.com/file/d/1Qo3-rd2ff1OvTqc5wecba0TBDLHfcjtp/view?usp=sharing*
 
 To begin, download python at https://www.python.org/downloads/. Once that's done install the following dependencies:
 
